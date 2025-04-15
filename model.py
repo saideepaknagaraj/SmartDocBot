@@ -11,8 +11,8 @@ from openai import OpenAI
 import json
 
 app = Flask(__name__)
-app.secret_key = b'_5#y2L"F4Q8z'  # Change this to a secure random key in production
-serpapi_key = "aac6a5d560123d85a707d259994b561bc195d898e35876f4c4dc1755703c6742"
+app.secret_key = b''  # Change this to a secure random key in production
+serpapi_key = ""
 
 DB_FAISS_PATH = 'vectorstore/db_faiss'
 
@@ -79,7 +79,7 @@ def final_result(query, conversation_history):
             print('yes')
             # If it does, ask OpenAI for a response
             # Construct the message as a list of dictionaries
-            client = OpenAI(api_key="sk-proj-f4PuDHjQYX4nCgKesn6dT3BlbkFJVHlGjE3734iFDmHM7e0B")
+            client = OpenAI(api_key="")
             message = [
                 {
                     "role": "user",
